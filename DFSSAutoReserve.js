@@ -148,15 +148,15 @@ function submitData(s,e,selected){
          + cartypeid + "&trainsessionid=" + trainsessionid + "&ReleaseCarID=" + ReleaseCarID,
          success: function (data) {
              if (data == "Timeout") {
-                 console.warn("警告", "当天约车已经超过6小时！", "warning");
+                 console.warn("警告,当天约车已经超过6小时！");
                  return;
              }
              if (data == "agotime") {
-                 console.warn("警告", "不能预约以前的车辆！", "warning");
+                 console.warn("警告,不能预约以前的车辆！");
                  return;
              }
              if (data == "saverror") {
-                 console.error("错误", "数据保存错误！", "error");
+                 console.error("错误,数据保存错误！");
                  return;
              }
              if (data == "error") {
